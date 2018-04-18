@@ -189,6 +189,12 @@ mount /dev/sda1 /mnt/investigateboot
 Create mapped device using the key and the LUKS header 
 
 ```bash
+cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /mnt/investigateboot/luks/osluksheader /dev/sda2 investigateosencrypt 
+```
+
+Mount the mapped device 
+
+```bash
 mount /dev/mapper/investigateosencrypt /mnt/investigateroot 
 ```
 
