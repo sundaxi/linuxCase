@@ -236,7 +236,7 @@ After regenerate the grub.cfg, we need to do modifcation manually, as the grub2-
 
 ```bash
 vi /boot/grub2/grub.cfg 
-linux16 /vmlinuz-<target kernel version> root=UUID=3c11fba3-32c7-4d0c-b614-aad5630504eb ro console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300 rd.debug LANG=en_US.UTF-8
+linux16 /vmlinuz-<target kernel version> root=/dev/mapper/osencrypt ro console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300 rd.debug LANG=en_US.UTF-8
 ```
 
 Then copy the yumupdatefix.sh again under this chroot environment 
