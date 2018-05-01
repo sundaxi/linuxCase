@@ -232,7 +232,7 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
 Then use grubby --default-kernel command to check the default kernel again
-After regenerate the grub.cfg, we need to do modifcation manually, as the grub2-mkconfig generate the configuration based on the chroot environment and we need to modify the root option manually. Modify the root=/dev/mapper/investigateroot to UUID(checked by blkid)
+After regenerate the grub.cfg, we need to do modifcation manually, as the grub2-mkconfig generate the configuration based on the chroot environment and we need to modify the root option manually. Modify the root=/dev/mapper/investigateroot to root=/dev/mapper/osencrypt 
 
 ```bash
 vi /boot/grub2/grub.cfg 
